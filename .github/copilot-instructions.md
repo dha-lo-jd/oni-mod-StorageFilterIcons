@@ -5,6 +5,7 @@ ONI (Oxygen Not Included) mod. Structure and build setup intentionally mirror th
 - `StorageFilterIcons/StorageFilterIcons.csproj`: `netstandard2.1`, LangVersion 10.0, references game DLLs directly from `$(GameManagedPath)`.
 - `StorageFilterIcons/Local.Build.props` (git-ignored; template: `Local.Build.props.example`) defines `GameManagedPath` and `ModInstallPath`. Env fallbacks: `ONI_GAME_MANAGED_PATH`, `ONI_MOD_INSTALL_PATH`.
 - Debug builds copy the DLL, pdb, `mod.yaml`, `mod_info.yaml`, `translations/*.po` and `ModAssets/*.png` to `$(ModInstallPath)`.
+- PLib (NuGet 4.25.0) is embedded into the mod DLL after build via ILRepack (`MergeAssemblies` target); do not ship PLib.dll separately.
 - Release builds produce a clean distribution folder in `release/StorageFilterIcons` (git-ignored).
 
 ## Build
