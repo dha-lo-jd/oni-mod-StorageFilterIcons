@@ -46,7 +46,9 @@ Option labels are translated through `translations/<language code>.po` (English 
 
 ## Known limitations
 
-- Overlay icons may overlap the meters of reservoir-type buildings.
+- Overlay icons can overlap the meter of reservoir-type buildings (most noticeably the Liquid Cargo Tank, whose meter
+  is in the middle of the building). There is no special avoidance; since the icons are translucent the meter stays
+  visible, and the overlay can be switched off per building in the settings.
 
 ## Local build setup
 
