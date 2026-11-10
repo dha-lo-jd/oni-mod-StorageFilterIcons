@@ -1,0 +1,37 @@
+[h1]Storage Filter Icons[/h1]
+
+Overlays the icons of the [b]filtered resources[/b] on the sprite of storage buildings, so you can tell at a glance what each Storage Locker, Smart Storage, Refrigerator or reservoir is set to hold.
+
+No more clicking into every storage just to check its filter.
+
+[h2]Features[/h2]
+[list]
+[*] The resources selected in a building's storage filter are drawn as [b]semi-transparent icons[/b] over its main sprite, arranged in a grid that fits the building and centered on it
+[*] Icons follow the [b]same order as the filter screen[/b] (categories alphabetically, then resources alphabetically)
+[*] Up to [b]8 icons[/b] are shown; any further selected resources are shown as [b]+N[/b]
+[*] Only individually selected resources are drawn: nothing appears when no resource is selected or when everything is selected, and resources without an icon are skipped
+[*] [b]Hover behavior[/b]: while the cursor is over a building, its icons can be enlarged, left unchanged or hidden, and drawn translucent or fully opaque
+[*] The icons are also listed in the [b]hover card[/b] shown when you hover a building (can be turned off)
+[*] Works with [b]every building that has a storage filter[/b], including buildings added by other mods. Individual buildings can be switched off in the settings
+[*] English and Japanese
+[/list]
+
+[h2]Settings[/h2]
+Open the mod's settings from the Mods screen (requires nothing extra; PLib is built in).
+[list]
+[*] [b]Icon opacity[/b]: opacity of the overlay icons (default 0.5)
+[*] [b]Icons on hover: size[/b]: Enlarge (default) / Unchanged / Hide
+[*] [b]Icons on hover: opacity[/b]: Translucent / Opaque (default)
+[*] [b]Show icons in hover card[/b]: on by default
+[*] [b]Buildings[/b]: one checkbox per filterable storage building; unchecked buildings show no icons
+[/list]
+
+[h2]Notes[/h2]
+[list]
+[*] Safe to add to or remove from existing saves; nothing is written to the save file.
+[*] The icons can overlap the meter of reservoir-type buildings (most noticeably the Liquid Cargo Tank, whose meter is in the middle of the building). The icons are translucent so the meter stays visible, and you can switch the overlay off for any building in the settings.
+[*] Settings are stored in the mod's [i]config.json[/i].
+[/list]
+
+[h2]Source[/h2]
+[url=https://github.com/dha-lo-jd/oni-mod-StorageFilterIcons]GitHub[/url] (MIT License)
