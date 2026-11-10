@@ -1,6 +1,9 @@
 using System.IO;
 using HarmonyLib;
 using KMod;
+using PeterHan.PLib.Core;
+using PeterHan.PLib.Options;
+using StorageFilterIcons.Options;
 using UnityEngine;
 
 namespace StorageFilterIcons;
@@ -13,6 +16,8 @@ public sealed class StorageFilterIconsMod : UserMod2
     {
         base.OnLoad(harmony);
         modPath = path;
+        PUtil.InitLibrary(false);
+        new POptions().RegisterOptions(this, typeof(ModOptions));
         harmony.PatchAll(typeof(StorageFilterIconsMod).Assembly);
     }
 
