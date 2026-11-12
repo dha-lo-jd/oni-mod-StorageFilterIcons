@@ -1,0 +1,5 @@
+{
+  "build": ["dotnet build StorageFilterIcons.sln -v q -p:ModInstallPath=F:/_System/Documents/Klei/OxygenNotIncluded/mods/local/StorageFilterIcons"],
+  "required_mods": ["StorageFilterIcons.Local"],
+  "save": "05 all research.sav"
+}

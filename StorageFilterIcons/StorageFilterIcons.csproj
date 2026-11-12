@@ -62,6 +62,17 @@
         </Reference>
     </ItemGroup>
 
+    <!-- In-game tests (Debug only, when HarnessDllPath is set) use Check/Arrange from Gravitas.TestHarness. -->
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug' and '$(HarnessDllPath)' != ''">
+        <DefineConstants>$(DefineConstants);HARNESS</DefineConstants>
+    </PropertyGroup>
+    <ItemGroup Condition="'$(Configuration)' == 'Debug' and '$(HarnessDllPath)' != ''">
+        <Reference Include="Gravitas.TestHarness">
+            <HintPath>$(HarnessDllPath)</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="ILRepack.MSBuild.Task" Version="2.0.13" PrivateAssets="all" />
         <PackageReference Include="PLib" Version="4.25.0">
@@ -89,8 +100,9 @@
         <PropertyGroup>
             <ILRepackExe>$(NuGetPackageRoot)ilrepack.msbuild.task\2.0.13\tools\ilrepack.exe</ILRepackExe>
             <ILRepackDebugFlag Condition="'$(Configuration)' == 'Release'">/ndebug</ILRepackDebugFlag>
+            <ILRepackHarnessLib Condition="'$(Configuration)' == 'Debug' and '$(HarnessDllPath)' != ''">/lib:&quot;$([System.IO.Path]::GetDirectoryName('$(HarnessDllPath)'))&quot;</ILRepackHarnessLib>
         </PropertyGroup>
-        <Exec Command="&quot;$(ILRepackExe)&quot; /parallel $(ILRepackDebugFlag) /lib:&quot;$(GameManagedPath)&quot; /out:&quot;$(TargetPath)&quot; &quot;@(IntermediateAssembly->'%(FullPath)')&quot; &quot;$(TargetDir)PLib.dll&quot;" />
+        <Exec Command="&quot;$(ILRepackExe)&quot; /parallel $(ILRepackDebugFlag) /lib:&quot;$(GameManagedPath)&quot; $(ILRepackHarnessLib) /out:&quot;$(TargetPath)&quot; &quot;@(IntermediateAssembly->'%(FullPath)')&quot; &quot;$(TargetDir)PLib.dll&quot;" />
     </Target>
 
     <!-- No pdb in Release builds. -->
