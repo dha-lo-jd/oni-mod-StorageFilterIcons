@@ -18,7 +18,6 @@ public sealed class StorageFilterIconsMod : UserMod2
         modPath = path;
         PUtil.InitLibrary(false);
         new POptions().RegisterOptions(this, typeof(ModOptions));
-        harmony.PatchAll(typeof(StorageFilterIconsMod).Assembly);
     }
 
     // Registers the strings and overloads them with translations/<language code>.po of the selected language.
