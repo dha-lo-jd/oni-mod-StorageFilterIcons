@@ -26,6 +26,8 @@ public enum HoverOpacityMode
     Opaque,
 }
 
+// Stored in mods/config/StorageFilterIcons/config.json so that a Workshop update (which replaces the mod folder) keeps the settings.
+[ConfigFile(SharedConfigLocation: true)]
 [JsonObject(MemberSerialization.OptIn)]
 public sealed class ModOptions : SingletonOptions<ModOptions>, IOptions
 {

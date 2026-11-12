@@ -1,7 +1,7 @@
 # Storage Filter Icons
 
 An Oxygen Not Included mod that overlays the icons of the **filtered resources** on the sprite of storage buildings,
-so you can tell at a glance what each Storage Locker, Smart Storage, Refrigerator or reservoir is set to hold.
+so you can tell at a glance what each Storage Bin, Smart Storage Bin, Refrigerator or rocket cargo bay is set to hold.
 
 ## Features
 
@@ -30,7 +30,7 @@ Open the mod's settings from the Mods screen (powered by PLib).
 | Show icons in hover card | Also list the icons in the building's hover card (default on) |
 | Buildings | One checkbox per filterable storage building; unchecked buildings show no icons |
 
-Settings are stored in the mod's `config.json`.
+Settings are stored in `mods/config/StorageFilterIcons/config.json` (outside the mod folder, so they are kept when the mod is updated).
 
 ## Translations
 
@@ -46,7 +46,7 @@ Option labels are translated through `translations/<language code>.po` (English 
 
 ## Known limitations
 
-- Overlay icons can overlap the meter of reservoir-type buildings (most noticeably the Liquid Cargo Tank, whose meter
+- Overlay icons can overlap the meter of rocket cargo tanks (most noticeably the Liquid Cargo Tank, whose meter
   is in the middle of the building). There is no special avoidance; since the icons are translucent the meter stays
   visible, and the overlay can be switched off per building in the settings.
 
