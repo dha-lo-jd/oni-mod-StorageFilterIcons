@@ -38,7 +38,7 @@ Option labels are translated through `translations/<language code>.po` (English 
 
 ## Compatibility
 
-- ONI build: **744825 or later**
+- ONI build: **763796 or later** (U60 or later of the game)
 - Required DLC: none
 - [PLib](https://github.com/peterhaneve/ONIMods) is embedded into the mod DLL (ILRepack); no separate install needed.
 - Patches `BuildingComplete.OnSpawn` (adds the overlay component) and, for the hover card,
