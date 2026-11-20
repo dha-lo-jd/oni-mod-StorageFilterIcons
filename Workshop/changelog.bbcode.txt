@@ -3,9 +3,9 @@
 [h2]1.1.0[/h2]
 [b]English[/b]
 [list]
-[*] Updated for the U60 release (requires U60 or later of the game). No behavior changes.
+[*] Confirmed to work on the U60 release; also still works on U59. No behavior changes.
 [/list]
 [b]日本語[/b]
 [list]
-[*] U60 に対応しました（ゲームの U60 以降が必要です）。動作は変わりません。
+[*] U60 での動作を確認しました。U59 でも引き続き動作します。動作は変わりません。
 [/list]
